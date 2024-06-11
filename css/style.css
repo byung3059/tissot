@@ -9,7 +9,9 @@
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
+
 
 .header .inner {
     display: flex;
@@ -40,6 +42,26 @@
     color: var(--white-color)
 }
 
+.header.on {
+    background: var(--white-color);
+    transition: 0.3s;
+}
+
+.header.on h1 {
+    background: url(../images/logo_black.png)
+}
+
+.header.on h1 a {
+    opacity: 0;
+}
+
+.header.on .gnb>ul>li>a {
+    color: var(--black-color);
+}
+
+.header.on .util>a {
+    color: var(--black-color);
+}
 
 
 
@@ -134,9 +156,10 @@
 }
 
 .main_content .inner .right .tit h2 {
+    margin: 0 0 16px 0;
+    text-indent: -1px;
     font-size: 40px;
     font-weight: 800;
-    margin: 0 0 16px 0;
 }
 
 .main_content .inner .right .tit p {
@@ -155,6 +178,7 @@
     width: 42px;
     height: 42px;
     border: 1px solid var(--line-color);
+    transition: 0.5s;
 }
 
 .main_content .inner .right .arrows button:hover {
@@ -164,6 +188,7 @@
 
 .main_content .inner .right .arrows button i {
     color: var(--line-color);
+    transition: 0.5s;
 }
 
 .main_content .inner .right .arrows button:hover i {
