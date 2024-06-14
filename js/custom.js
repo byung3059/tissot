@@ -2,14 +2,12 @@ $(function () {
 
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
-
         if (sct > 4) {
             $('.header').addClass('on')
         } else {
             $('.header').removeClass('on')
         }
     })
-
 
     $('.header .mbtn').on('click', function () {
         $('.header .gnb').toggleClass('on')
@@ -25,7 +23,7 @@ $(function () {
     $('.content_right_slide').slick({
         arrows: false,
         slidesToShow: 3,
-        asNavFor: '.content_left_slide',
+        asNavFor: '.content_left_slide'
     });
 
     $('.right .arrows .prev').on('click', function () {
@@ -39,22 +37,40 @@ $(function () {
 
     })
 
+    $('.banner_slide').slick({
+        dots: true,
+        arrows: false,
+    })
+
+    $('.news_slide').slick({
+        dots: false,
+        arrows: false,
+        slidesToShow: 3,
+
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                }
+            }
+        ]
+    })
+
     $('.to_top button').on('click', function () {
         $('html, body').animate({ scrollTop: 0, }, 300)
     });
 
+
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
-
         if (sct > 800) {
             $('.to_top').addClass('on')
         } else {
             $('.to_top').removeClass('on')
         }
     })
-
-
-
 
 
 })
