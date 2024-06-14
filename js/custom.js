@@ -37,9 +37,20 @@ $(function () {
 
     })
 
-    $('.banner_slide').slick({
+   $('.banner_slide').slick({
         dots: true,
         arrows: false,
+
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    fade: true,
+                }
+            }
+        ]
     })
 
     $('.news_slide').slick({
@@ -49,10 +60,11 @@ $(function () {
 
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 769,
                 settings: {
                     slidesToShow: 1,
                     dots: true,
+                    fade: true,
                 }
             }
         ]
